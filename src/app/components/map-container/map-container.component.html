@@ -1,3 +1,15 @@
 <p>
-  map-container works!
+  Map
 </p>
+
+<button *ngIf="item | async"
+        (click)="openInfoMap()">
+  Open info map {{isInfoPanelOpen}}
+</button>
+
+<app-info-panel
+  *ngIf="isInfoPanelOpen"
+  [item]="item | async"
+  (onInfoPanelClose)="closeInfoPanel()"
+  [ngClass]="{'desktop': isDesktop}">
+</app-info-panel>

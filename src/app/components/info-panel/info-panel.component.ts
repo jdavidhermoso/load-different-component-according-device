@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Item} from '../../models/item.model';
 
 @Component({
   selector: 'app-info-panel',
   templateUrl: './info-panel.component.html',
   styleUrls: ['./info-panel.component.css']
 })
-export class InfoPanelComponent implements OnInit {
+export class InfoPanelComponent {
+  @Input()
+  public item: Item;
 
-  constructor() { }
+  @Output()
+  public onInfoPanelClose: EventEmitter<any> = new EventEmitter<any>();
 
-  ngOnInit() {
+
+  public closeInfoPanel() {
+    this.onInfoPanelClose.emit();
   }
-
 }
