@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Item} from '../../models/item.model';
+import {Item} from '../../models';
 
 @Component({
   selector: 'app-info-panel',
@@ -12,6 +12,10 @@ export class InfoPanelComponent {
 
   @Output()
   public onInfoPanelClose: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor() {
+    console.log('InfoPanelComponent');
+  }
 
 
   public closeInfoPanel() {

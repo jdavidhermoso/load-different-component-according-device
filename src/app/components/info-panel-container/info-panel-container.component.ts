@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ItemsService} from '../../services/items.service';
+import {ItemsService} from '../../services';
 import {Observable} from 'rxjs';
-import {Item} from '../../models/item.model';
+import {Item} from '../../models';
 import {Router} from '@angular/router';
 
 @Component({
@@ -13,6 +13,7 @@ export class InfoPanelContainerComponent implements OnInit {
   public item: Observable<Item>;
 
   constructor(private itemsService: ItemsService, private router: Router) {
+    console.log('InfoPanelContainerComponent');
   }
 
   ngOnInit() {

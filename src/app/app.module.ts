@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {MapContainerComponent} from './components/map-container/map-container.component';
+import {MapContainerComponent} from './components';
 import {InfoPanelComponent} from './components/info-panel/info-panel.component';
 import {InfoPanelContainerComponent} from './components/info-panel-container/info-panel-container.component';
 import {DeviceDetectorModule} from 'ngx-device-detector';

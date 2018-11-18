@@ -2,14 +2,13 @@
   Map
 </p>
 
-<button *ngIf="item | async"
-        (click)="openInfoMap()">
-  Open info map {{isInfoPanelOpen}}
+<button (click)="toggleInfoPanel(true)">
+  Some marker in the map
 </button>
 
 <app-info-panel
   *ngIf="isInfoPanelOpen"
   [item]="item | async"
-  (onInfoPanelClose)="closeInfoPanel()"
+  (onInfoPanelClose)="toggleInfoPanel(false)"
   [ngClass]="{'desktop': isDesktop}">
 </app-info-panel>
